@@ -1,0 +1,329 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    
+    
+<meta charset="utf-8">
+<link rel="apple-touch-icon" href="http://image.kyobobook.co.kr/mimages/static/images/common/apple-touch-icon.png" class="ico_homeAdd">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+
+
+
+<script src="http://mobile.kyobobook.co.kr/js/jquery/jquery-1.11.3.min.js"></script>
+<script src="http://mobile.kyobobook.co.kr/js/jquery/jquery.easing.1.3.min.js"></script>
+<script src="http://mobile.kyobobook.co.kr/js/jquery/jquery.lazyload.min.js"></script>
+<script src="http://mobile.kyobobook.co.kr/js/common/kyobo_common.js?20210713"></script>
+
+
+
+
+<link href="http://image.kyobobook.co.kr/mimages/static2/css/m_welcome.css?20170907" rel="stylesheet">
+<script src="http://mobile.kyobobook.co.kr/js/jquery/ui.js?20210428"></script>
+<script src="http://mobile.kyobobook.co.kr/js/common/commonRenewal.js?20210706"></script><!-- renewalCommon.js로 변경 예정  -->
+
+
+<script src="http://mobile.kyobobook.co.kr/js/common/sns.js?20200527"></script>
+
+<div id="commonLayerShare" class="layer_pop_l">
+	<div class="layer_inner">
+		<div class="layer_header">
+			<div class="heading">공유하기</div>
+			<button type="button" class="close_layer" title="레이어닫기">x</button>
+		</div>
+		<div class="layer_container">
+			<div class="share_area">
+				<input type="hidden" id="originalShareUrl" value="http://mobile.kyobobook.co.kr/event/contents" />
+				<ul class="share_list">
+					<!-- 카톡 -->
+					<li class="ico_kakao">
+						
+								<a id="kakaotalkLink" href="javascript:orderClickCheck('');kakaoTalkLinkNoimg('엽편 자판기', 'http://mobile.kyobobook.co.kr/event/contents');" >카카오톡</a>
+							
+					</li>
+					<!-- 카스 -->
+					<li class="ico_kakao_story"><a href="javascript:orderClickCheck('');kakaoStoryLink('http://mobile.kyobobook.co.kr/event/contents', '엽편 자판기', '');" >카카오스토리</a></li>
+					<!-- 페북 -->
+					<li class="ico_facebook"><a href="javascript:orderClickCheck('');shareSnsNewWin('facebook', 'http://mobile.kyobobook.co.kr/event/contents', '엽편 자판기');" >페이스북</a></li>
+					<!-- 트위터 -->
+					<li class="ico_twitter"><a href="javascript:orderClickCheck('');shareSnsNewWin('twitter',  'http://mobile.kyobobook.co.kr/event/contents', '엽편 자판기');" >트위터</a></li>
+
+					<!-- Naver 라인 -->
+					<li class="ico_line">
+						<script type="text/javascript" src="/js/common/line.js" ></script>
+						<a href="javascript:orderClickCheck('');outerUrl(directLineShareUrl('http://mobile.kyobobook.co.kr/event/contents', '엽편 자판기'));">라인</a>
+					</li>
+
+					<!-- Naver band -->
+					<li class="ico_band">
+						<script type="text/javascript" src="/js/common/band.js"></script>
+						<script type="text/javascript">new ShareBand.makeButton({"lang":"ko","type":"d","text":"엽편 자판기","withUrl":true,"orderClick":""} );</script>
+					</li>
+					<li class="ico_message"><a href="javascript:messageLink('http://mobile.kyobobook.co.kr/event/contents', '엽편 자판기', '');">문자</a></li>
+					<li class="ico_url"><a href="javascript:urlLink('http://mobile.kyobobook.co.kr/event/contents', '엽편 자판기', '');">주소복사</a></li>
+					<li class="ico_more"><a href="javascript:moreLink('http://mobile.kyobobook.co.kr/event/contents', '엽편 자판기', '');">더보기</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		// header 에 생성된 layer html 을 body 에 붙여넣음
+		$('#commonLayerShare').detach().appendTo(document.body);
+
+		// 공유하기 버튼 추가
+		$('.header_type1').append('<a href="#commonLayerShare" style="z-index:999;" class="btn_share3" onclick="showlayer3(this, this.hash);" title="레이어팝업 열기">공유</a>')
+	});
+</script>
+
+
+
+
+
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" href='/images/common/launcher_icon.png' class="ico_homeAdd">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+    <meta name = "format-detection" content = "telephone=no"/>
+    <title></title>
+    <style>
+        .conte_viewer .pops {display: none;}
+    </style>
+</head>
+<body id="monthlyBookshop">
+<div class="wrap">
+    <h1 class="blind">KYOBO 교보문고</h1>
+    <header id="header">
+        
+
+<div class="logo_wrap" data-tooltip="wrap">
+
+    
+            <h1 class="logo"><a href="/?orderClick=711" onclick="GA_Event('교보문고_공통_MO', '메인 바로가기', '교보문고 로고');">교보문고</a></h1>
+        
+
+    <button type="button" class="logo_more" data-tooltip="btn" title="보기" onclick="orderClickCheck('712');ga360clickCheck('logo_more');">사이트 더보기</button>
+    <ul class="site_more" data-tooltip="cont">
+        <li class="type_kyobo"><a href="/?orderClick=713" onclick="GA_Event('교보문고_공통_MO', '메뉴 더보기', '교보문고');">교보문고</a></li>
+    </ul>
+</div>
+<form name="search_from" id="search_form" action="/search/main" method="post" onsubmit="return false;">
+    <div class="search_wrap">
+        <input type="text" name="query" id="searchInput" onclick="javascript:orderClickCheck('71b');" title="검색어" placeholder="압도적 서사와 서늘한 공포!" readonly="readonly">
+        <button type="button" class="btn_h_search" id="search" onclick="orderClickCheck('71b');$.goSearch();" title="검색">검색</button>
+    </div>
+</form>
+<div class="btn_cart">
+    <a href="javascript:GA_Event('교보문고_공통_MO', '최상단', '장바구니');updateSSOCookieTime(getIntegratedOrderUrl('/cart/cartListMain?orderClick=71c'));">
+        <span>장바구니</span>
+        <!-- em class="cart_no">N</em-->
+    </a>
+</div>
+
+ <script type="text/javascript">
+ // s: 상단 검색 box 광고
+    var adSearchUrl = "";
+    var queryId     = "#searchInput";
+    jQuery(function() {
+        var url = ((window.location.href.toLowerCase().indexOf("https") === 0) ? "https://" : "http://") +
+                "imac.kyobobook.co.kr/jsonp/mobile/mobile_welcome/mobile_welcome@mo_3?callback=?";
+
+        jQuery.getJSON(url, function(data) {
+                if(data.items.length > 0){
+                        jQuery.each(data.items, function(i, item) {
+                                if($(queryId).val()==''){
+                                    $(queryId).attr('placeholder', item.ad_text);
+                                    //$(queryId).val(item.ad_text);
+                                    adSearchUrl = item.click_url;
+                                }
+                        });
+                }
+        });
+    });
+
+    $("button[id='search']").on("click", function(){
+        if( adSearchUrl != "" ){
+            $("#navi_bar").show();
+            location.href= adSearchUrl;
+        } else {
+            $.goSearch();
+        }
+    })
+
+    var openHeadLayerPopup = function(obj, target) {
+	    var layerObject = $(target); 
+	    
+	    layerObject.show();
+	    openPosition();
+	    
+	    layerObject.find(".close_layer").off("click cloaseLayerPopup").on("click cloaseLayerPopup", function(){
+	        layerObject.hide();
+	        closePosition();
+	    });
+    }
+    
+    var closeHeadLayerPopup = function(obj) {
+        $(obj).closest(".layer_overlay").hide();
+        closePosition();
+    }
+
+</script>
+        
+        <div class="header_type1">
+            <div class="back">
+                <button type="button" class="historyBackClass">뒤로</button>
+            </div>
+            <h2>엽편 자판기</h2>
+        <a href="#commonLayerShare" style="z-index:999;" class="btn_share3" onclick="showlayer3(this, this.hash);" title="레이어팝업 열기">공유</a></div>
+    </header>
+    <section id="content">
+
+
+		<!-- s: 이벤트 --> 
+		<link rel="stylesheet" href="http://image.kyobobook.co.kr/ink/images/prom/2021/general/210812_kyoboland/design_m.css" />
+        <div class="event_area">
+
+			<div class="kyoboland_main">
+				<div class="section01">
+					<div class="ani_wrap">
+						<img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_01.jpg" alt="">
+						<div class="ani e00_1"><img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_01_01.png" alt="41주년 특별기획"></div>
+						<div class="ani e00_2">
+							<span class="flicker"><img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_01_03.png" alt="flash"></span>
+							<span><img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_01_02.png" alt="kyobo"></span>
+						</div>
+						<div class="ani e00_3"><img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_01_04.png" alt="land"></div>
+						<div class="ani e00_4"><img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_01_05.png" alt="꿈을 키우는 세상"></div>
+					</div>
+				</div><!-- //section01 -->
+
+				<div class="section02">
+					<div class="e00_6">
+						<div>교보랜드 곳곳에 숨어있는 배지를 획득하세요</div>
+						<div class="total">
+							<span class="entry">참여자수 000명</span>
+							<span class="badge">획득한 배지 1 / 7</span>
+						</div>
+					</div>
+				</div><!-- //section2 -->
+
+				<div class="section03">
+					<div class="zone_area">
+						<div class="zone_1">
+							<img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_03.jpg" alt="1.교보 부띠끄">
+							<a class="btn_zone_1" href="#"><img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/btn_zone_1.png" alt="교보 부띠끄 지름신 강림하는 한정판 데스크테리어 go"></a>
+						</div>
+						<div class="zone_2">
+							<img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_04.jpg" alt="2.교보랜드 쇼룸">
+							<a class="btn_zone_2" href="#"><img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/btn_zone_2.png" alt="교보랜드 쇼룸 매장에서 만날 수 있는 교보랜드 특별전시 공간 go"></a>
+						</div>
+						<div class="zone_3">
+							<img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_05.jpg" alt="3.책며드는 심리테스트">
+							<a class="btn_zone_3" href="#"><img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/btn_zone_3.png" alt="책며드는 심리테스트 입장한 순간, 책 속 주인공이 된다...! go"></a>
+						</div>
+						<div class="zone_4">
+							<img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_06.jpg" alt="4.취향책방">
+							<a class="btn_zone_4" href="#"><img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/btn_zone_4.png" alt="취향책방 향기는 책을 꺠우고 책은 향기를 품는다 go"></a>
+						</div>
+						<div class="zone_5">
+							<img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_07.jpg" alt="5.인생문장">
+							<a class="btn_zone_5" href="#"><img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/btn_zone_5.png" alt="인생문장 찾았다 이상형! 꿈에 그리던 인생 책 go"></a>
+						</div>
+						<div class="zone_6">
+							<img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_08.jpg" alt="6.브랜드관">
+							<a class="btn_zone_6" href="#"><img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/btn_zone_6.png" alt="브랜드관 Since 1980 교보문고 브랜드관 go"></a>
+						</div>
+						<div class="zone_7">
+							<img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_09.jpg" alt="7.교보랜드 쇼룸">
+							<a class="btn_zone_7" href="#"><img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/btn_zone_7.png" alt="교보랜드 쇼룸 매장에서 만날 수 있는 교보랜드 특별 전시 공간"></a>
+						</div>
+						<div class="zone_8">
+							<img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_10.jpg" alt="8.비밀의 방">
+							<a class="btn_zone_8" href="#"><img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/btn_zone_8.png" alt="비밀의 방 교보랜드 마지막 관문 go"></a>
+						</div>
+					</div><!-- //zone_area -->
+
+					<img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_11.jpg" alt="교보문고 41주년">
+				</div><!-- //section03 -->
+
+
+				<!-- 21-09-23 혜택 삭제 -->
+				<!-- div class="section04">
+					<img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_bn.jpg" alt="4주년 기념 할인 혜택">
+
+					<a href="http://mobile.kyobobook.co.kr/event/show/9731"><img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_bn_01.jpg" alt="카카오페이 3,000원 즉시 할인"></a>//카카오페이 ~9/30
+
+					//21-09-07 삭제 a href="http://mobile.kyobobook.co.kr/event/show/10802"><img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_bn_02.jpg" alt="신한카드 3,500원 즉시 할인"></a>
+
+					//21-09-14 하나카드 삭제 <a href="http://mobile.kyobobook.co.kr/event/show/13770"><img src="http://image.kyobobook.co.kr/mimages/static2/images/prom/2021/210812_kyoboland/bnE_m00_bn_02_1.jpg" alt="하나카드 5000원 즉시할인"></a>//21-09-07 하나카드 추가
+
+				</div --><!-- //section04 -->
+				<!-- //21-08-30 section04 추가 -->
+				<!-- //21-09-23 혜택 삭제 -->
+
+
+			</div><!-- //kyoboland_main -->
+			<script type="text/javascript" src="http://image.kyobobook.co.kr/ink/images/prom/2021/general/210812_kyoboland/animation_m.js"></script>
+
+		</div><!-- //event_wrap -->
+
+		<!-- e: 이벤트 -->
+ 
+
+
+   </section>
+    
+<!-- footer -->
+<footer id="footer">
+    <ul class="f_t_munu">
+        
+            <li><a id="btnLoginFt" href="#" onclick="GA_Event('교보문고_공통_MO', 'FNB', '로그인');">로그인</a></li>
+            <li><a href="/member/join/gate?orderClick=723" onclick="GA_Event('교보문고_공통_MO', 'FNB', '회원가입');">회원가입</a></li>
+        
+        <li><a href="/appDown?orderClick=725" onclick="GA_Event('교보문고_공통_MO', 'FNB', 'APP다운');">APP다운</a></li>
+        <li><a href="javascript:outerLoginUrl('http://www.kyobobook.co.kr/index.laf?orderClick=mLa&orderClick=726', '');" onclick="GA_Event('교보문고_공통_MO', 'FNB', 'PC버전');">PC버전</a></li>
+    </ul>
+    <ul class="f_b_menu">
+        <li><a href="/pop_terms?orderClick=727" target="_blank" title="새창" onclick="GA_Event('교보문고_공통_MO', 'FNB', '이용약관');">이용약관</a></li>
+        <li><a href="/pop_policy?orderClick=728" target="_blank" title="새창" onclick="GA_Event('교보문고_공통_MO', 'FNB', '개인정보처리방침');">개인정보처리방침</a></li>
+        <li><a href="/pop_youth?orderClick=729" target="_blank" title="새창" onclick="GA_Event('교보문고_공통_MO', 'FNB', '청소년보호정책');">청소년보호정책</a></li>
+        <li><a href="/helpcenter/guidePublisher?orderClick=72a" onclick="GA_Event('교보문고_공통_MO', 'FNB', '협력사 여러분');">협력사 여러분</a></li>
+    </ul>
+    <div class="f_copyright">
+        <em>@Kyobo Book Centre</em>
+        <button type="button" data-toggle="toggle" title="보기" onclick="javascript:orderClickCheck('72b');GA_Event('교보문고_공통_MO', '하단_GNB', '사업자정보');">사업자 정보</button>
+        <div data-toggle="cont">
+            <strong>교보문고</strong><br>
+            대표이사 : 안병현<br>
+            사업자 등록번호 : 102-81-11670<br>
+            서울시 통신판매업신고번호 : 제 653호 <a href="javascript:orderClickCheck('72c');checkUrlOuter('https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1028111670&apv_perm_no=');" title="새창열림" >사업자정보확인</a><br>
+            주소: 서울특별시 종로구 종로 1 (03154)<br>
+            대표전화 : 1544-1900 <a href="javascript:orderClickCheck('72d');checkUrlOuter('https://pgweb.uplus.co.kr/ms/escrow/s_escrowYn.do?mertid=mok1109')" title="새창열림" >구매안전서비스</a>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+<!-- naviBar include -->
+
+
+<!-- navi bar -->
+<div class="navi_bar">
+</div>
+<!-- //navi bar -->
+
+<!-- btm_btn_wrap -->
+<div class="btm_btn_wrap">
+</div>
+<!-- //btm_btn_wrap -->
+
+<div class="dim_layer"></div>
+
+</body>
+</html>
